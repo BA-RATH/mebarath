@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initia-scale=1.0">
+        <title>Barath Aravind</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/cb0c218734.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="20240914_121418.jpg" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Portfolio">Resume</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Application Developer</p>
+                    <h1>Hi, I am <span>Barath</span> Aravind</h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="20230723_183140_1_700x600.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="sub">About me</h2>
+                        <p>
+                            I am Barath Aravind, a Computer Application graduate with a strong passion for application development and problem-solving using data structures and algorithms. As a future application developer at Accenture, I am eager to apply my technical skills and work on impactful projects. I have experience in learning technologies like Java Spring Boot and am constantly exploring new frameworks and tools to enhance my expertise.
+                            <br>
+                            In addition to my academic background, I am driven by an entrepreneurial spirit and plan to start my own business in the future. I am also keen on maintaining a balance between personal growth and professional development, dedicating time to both work and business ventures.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active" id="skills">
+                            <ul>
+                                <li><span>Languages</span><br>Python,Java,C</li>
+                                <li><span>Framework</span><br>Selenium,Numpu,pyautogui</li>
+                                <li><span>Others</span><br>Data structures,algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>⌛ 2021</span><br>Class 12th from BMC Matric School</li>
+                                <li><span>⌛ 2024</span><br>BCA from Gurn Nanak College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Resume</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="new1.jpg" id="res">
+                        <div class="layer">
+                            <h3>Check out my resume  <a href="Barath Resume (1).pdf"><i class="fa-solid fa-arrow-up-right-from-square" style="color:#ff6f00;"></i></i></a></h3>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Contact">
+            <div class="row">
+                <div class="Contact-left">
+                    <h1 class="sub-title">
+                        Contact me
+                    </h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:bharatharavind3103.com" style="color:#ff6f00">  bharatharavind3103@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:+918220167457" style="color:#ff6f00">  +91-8220167457</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_ba.rath_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/itzzbarath/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.reddit.com/user/ItsBarath/"><i class="fa-brands fa-square-reddit"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© 2024 Barath. All rights reserved.</p>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active");
+                }
+                event.currentTarget.classList.add("active");
+                document.getElementById(tabname).classList.add("active");
+            }
+        </script>
+        <script>
+            var sidemeu=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemeu.style.right="0";
+            }
+            function closemenu(){
+                sidemeu.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>
